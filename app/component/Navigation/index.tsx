@@ -2,40 +2,41 @@
 
 import { getURL } from "next/dist/shared/lib/utils"
 import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
+
+const route = [
+   {
+       name:"Master Kendaraan",
+       to:"/master_kendaraan"
+   },
+   {
+       name:"Master Customer",
+       to:"/master_customer"
+   },
+   {
+       name:"Penyewaan & Pengembalian",
+       to:"/penyewaan_pengembalian"
+   },{
+       name:"Manajemen Stok",
+       to:"/manajemen_stok"
+   },{
+       name:"Manajemen Denda",
+       to:"/manajemen_denda"
+   },{
+       name:"Riwayat Transaksi",
+       to:"/riwayat_transaksi"
+   }]
 
 export default function Navigation(){
     const params = usePathname()
     return(
         <>
-          <div className="shadow-xl fixed top-0 left-0 shadow-blue-800/80 bg-blue-800 min-h-screen w-72 p-4">
+          <div className="shadow-xl z-50 fixed top-0 left-0 shadow-blue-800/80 bg-blue-800 min-h-screen w-72 p-4">
             <Link href={"/"}><h1 className="font-bold text-center text-white text-xl">Kilbram</h1></Link>
             <div className="my-6 border-4 border-white"></div>
             <div className="flex flex-col">
             {
-                [
-                {
-                    name:"Master Kendaraan",
-                    to:"/master_kendaraan"
-                },
-                {
-                    name:"Master Customer",
-                    to:"/master_customer"
-                },
-                {
-                    name:"Penyewaan & Pengembalian",
-                    to:"/penyewaan_pengembalian"
-                },{
-                    name:"Manajemen Stok",
-                    to:"/manajemen_stok"
-                },{
-                    name:"Manajemen Denda",
-                    to:"manajemen_denda"
-                },{
-                    name:"Riwayat Transaksi",
-                    to:"riwayat_transaksi"
-                }
-            ].map((item,index)=>{
+               route.map((item,index)=>{
                     return(
                             <button
                             key={index++}
@@ -58,6 +59,12 @@ export default function Navigation(){
             }
             </div>
           </div>  
+
+          <div className="shadow-xl ml-70 p-4 fixed top-0 w-full z-20">
+                {
+                    <h1 className="font-bold text-blue-800">{route.find(item=>item.to == params)?.name}</h1>
+                }
+          </div>
         </>
     )
 }

@@ -1,0 +1,30 @@
+[
+    {
+      "kendaraan_id": 1,
+      "nama_kendaraan": "Toyota Avanza",
+      "jenis_kendaraan": "MPV",
+      "biaya_sewa_per_hari": 350000,
+      "stok_kendaraan": 5
+    },
+    {
+      "kendaraan_id": 2,
+      "nama_kendaraan": "Honda Brio",
+      "jenis_kendaraan": "City Car",
+      "biaya_sewa_per_hari": 250000,
+      "stok_kendaraan": 3
+    },
+    {
+      "kendaraan_id": 3,
+      "nama_kendaraan": "Mitsubishi Pajero",
+      "jenis_kendaraan": "SUV",
+      "biaya_sewa_per_hari": 800000,
+      "stok_kendaraan": 2
+    },
+    {
+      "kendaraan_id": 4,
+      "nama_kendaraan": "Suzuki Ertiga",
+      "jenis_kendaraan": "MPV",
+      "biaya_sewa_per_hari": 300000,
+      "stok_kendaraan": 4
+    }
+]

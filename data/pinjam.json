@@ -1,0 +1,18 @@
+[
+    {
+      "pinjam_id": 5001,
+      "customer_id": 101,
+      "kendaraan_id": 1,
+      "tanggal_peminjaman": "2024-05-20",
+      "tanggal_pengembalian": "2024-05-22",
+      "status": "Kembali"
+    },
+    {
+      "pinjam_id": 5002,
+      "customer_id": 102,
+      "kendaraan_id": 3,
+      "tanggal_peminjaman": "2024-05-25",
+      "tanggal_pengembalian": "2024-05-28",
+      "status": "Dipinjam"
+    }
+  ]
