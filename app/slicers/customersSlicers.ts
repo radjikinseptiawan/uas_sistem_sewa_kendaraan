@@ -18,7 +18,7 @@ export const customersSlicers = createSlice({
             state.name = action.payload
         },
         setNik:(state,action:PayloadAction<string>)=>{
-            state.name = action.payload
+            state.nik = action.payload
         }
     }
 })
