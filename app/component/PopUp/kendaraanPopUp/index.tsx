@@ -4,9 +4,13 @@ export default function PopUp({openForm,action,
     idKendaraan,
     biayaSewa,
     stokKendaraa,
-    dibuatPada
+    dibuatPada,
+    editAction,
+    deleteAction,
 }:{
+    deleteAction:()=>void,
     action:()=>void,
+    editAction:()=>void,
     namaKendaraan:string,
     jenisKendaraan:string,
     idKendaraan:string,
@@ -32,9 +36,9 @@ export default function PopUp({openForm,action,
                     <p className="text-slate-500 text-sm font-medium">Stok Kendaraan: {stokKendaraa}</p>
                     <p className="text-slate-500 text-sm font-medium">Dibuat pada: {dibuatPada}</p>
                     <div className="flex gap-2 justify-center">
-                        <button className="px-6 py-2 rounded-lg cursor-pointer bg-yellow-600 text-white font-semibold hover:bg-yellow-700 shadow-lg shadow-blue-200 transition-all" >Edit</button>
+                        <button onClick={editAction} className="px-6 py-2 rounded-lg cursor-pointer bg-yellow-600 text-white font-semibold hover:bg-yellow-700 shadow-lg shadow-blue-200 transition-all" >Edit</button>
                         <button onClick={action} className="px-6 py-2 rounded-lg cursor-pointer bg-slate-600 text-white font-semibold hover:bg-slate-700 shadow-lg shadow-blue-200 transition-all">Tutup</button>
-                        <button className="px-6 py-2 rounded-lg cursor-pointer bg-red-600 text-white font-semibold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all">Hapus</button>
+                        <button onClick={deleteAction} className="px-6 py-2 rounded-lg cursor-pointer bg-red-600 text-white font-semibold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all">Hapus</button>
                     </div>
 
                 </div>

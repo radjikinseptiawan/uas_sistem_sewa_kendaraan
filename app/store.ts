@@ -1,9 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit"
 import kendaraanReducers  from "./slicers/kendaraanAdd"
+import customerReducers from './slicers/customersSlicers'
+import editKendaraanReducers from "./slicers/kendaraanEdit"
 
 export const store = configureStore({
     reducer:{
-        kendaraan:kendaraanReducers
+        kendaraan:kendaraanReducers,
+        customers:customerReducers,
+        editKendaraan:editKendaraanReducers,
     }
 })
 

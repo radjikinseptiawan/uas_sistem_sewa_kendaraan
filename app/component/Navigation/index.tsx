@@ -60,7 +60,7 @@ export default function Navigation(){
             </div>
           </div>  
 
-          <div className="shadow-xl ml-70 p-4 fixed top-0 w-full z-20">
+          <div className="shadow-xl ml-70 p-4 fixed top-0 w-full z-30 bg-white">
                 {
                     <h1 className="font-bold text-blue-800">{route.find(item=>item.to == params)?.name}</h1>
                 }
