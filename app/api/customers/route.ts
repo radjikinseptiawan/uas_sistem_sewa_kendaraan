@@ -20,7 +20,6 @@ export async function GET(){
             }
         })
 
-        console.log(dataCostumers)
         if(error){
             return NextResponse.json({
                 error
