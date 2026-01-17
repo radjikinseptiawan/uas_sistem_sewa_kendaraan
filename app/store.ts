@@ -4,14 +4,15 @@ import customerReducers from './slicers/customersSlicers'
 import editKendaraanReducers from "./slicers/kendaraanEdit"
 import editCustomerReducers from "./slicers/customersSlicersEdit"
 import penyewaanPengembalianReducers from "./slicers/penyewaanSlicers"
-
+import  dendaSlicersReducers  from "./slicers/dendaSlicers"
 export const store = configureStore({
     reducer:{
         kendaraan:kendaraanReducers,
         customers:customerReducers,
         editKendaraan:editKendaraanReducers,
         editCustomer:editCustomerReducers,
-        penyewaan:penyewaanPengembalianReducers
+        penyewaan:penyewaanPengembalianReducers,
+        denda:dendaSlicersReducers
     }
 })
 

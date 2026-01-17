@@ -89,7 +89,7 @@ export default function Page(){
                                 key={index++}
                                 sum={()=>tambahStok(item.kendaraan_id)}
                                 min={()=>kurangStok(item.kendaraan_id)} 
-                                idKendaraan={index++} 
+                                idKendaraan={index+1} 
                                 namaKendaraan={item.nama_kendaraan} 
                                 jenisKendaraan={item.jenis_kendaraan} 
                                 biayaKendaraan={item.biaya_sewa_per_hari} 
