@@ -3,7 +3,7 @@ import Navigation from "./component/Navigation";
 
 export default function Home() {
   useEffect(()=>{
-    window.location.href = "/master_kendaran"
+    window.location.href = "/master_kendaraan"
   },[])
   return (
     <>
