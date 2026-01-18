@@ -25,7 +25,7 @@ export async function POST(req:Request){
         peminjaman_id:body.pinjam_id,
         tanggal_kembali_aktual : body.tanggalTercatat,
         total_hari_terlambat: body.totalHariTerlambat,
-        total_denda: body.jumlahDenda,
+        total_denda: body.jumlahDenda * body.totalHariTerlambat,
     })
 
     if(error){
