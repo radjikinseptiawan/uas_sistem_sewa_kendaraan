@@ -109,7 +109,7 @@ export default function Page() {
                                             {item.denda_terkait?.pinjam_kendaraan?.master_customer?.nama_customer || item.master_customer?.nama_customer}
                                         </td>
                                         <td className="p-3 border border-slate-300">
-                                            {item.customer_id.substring(0, 8)}... {/* Dummy KTP dari ID */}
+                                            {item.customer_id ? `${item.customer_id.substring(0, 8)}...}`: "-"}
                                         </td>
                                         <td className="p-3 border border-slate-300">{item.nama_kendaraan}</td>
                                         <td className="p-3 border border-slate-300">{totalHari} Hari</td>

@@ -4,7 +4,9 @@ import { NextResponse } from "next/server"
 export async function GET(){
     
     try{
-        const {data, error} = await supabase.from("pinjam_kendaraan").select(`*,master_customer(nama_customer),master_kendaraan(nama_kendaraan)`)
+        const {data, error} = await supabase.from("pinjam_kendaraan").select(`*,
+            master_customer:customer_id(nama_customer),
+            master_kendaraan:kendaraan_id(nama_kendaraan)`)
 
     if(error){
         return NextResponse.json({

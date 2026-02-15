@@ -146,6 +146,9 @@ export default function Page(){
         setIsDataPeminjam(true)
     },[])
 
+
+    console.log(dataPeminjam)
+
     useEffect(()=>{
         checkVechicle(kendaraanDipinjam)
     },[kendaraanDipinjam])
@@ -197,8 +200,8 @@ export default function Page(){
                                 <TableBodyPeminjaman key={index}
                                 tanggalPeminjaman={item.tanggal_peminjaman}
                                 tanggalPengembalian={item.tanggal_pengembalian}
-                                namaPeminjaman={item.master_customer.nama_customer}
-                                kendaraanDipinjam={item.master_kendaraan.nama_kendaraan} nomor={index+1}
+                                namaPeminjaman={item.master_customer?.nama_customer}
+                                kendaraanDipinjam={item.master_kendaraan?.nama_kendaraan} nomor={index+1}
                                 ></TableBodyPeminjaman>
                             )
                         }) : 
